@@ -8,7 +8,7 @@ yesBtn.addEventListener("click", () => {
 
 noBtn.addEventListener("mouseover", () => {
   const x = Math.random() * 700 - 300;
-  const y = Math.random() * 700 - 300;
+  const y = Math.random() * 400 - 200;
 
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
