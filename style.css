@@ -1,9 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   min-height: 100vh;
   margin: 0;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,10 +17,10 @@ body {
 
 .container {
   background: white;
-  padding: 40px 20px;
+  padding: 20px 15px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  max-width: 90%;
+  max-width: 95%;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -24,21 +28,27 @@ body {
 
 h1 {
   color: #ff4d6d;
-  font-size: clamp(24px, 5vw, 36px);
+  font-size: 28px;
+  margin: 10px 0;
 }
 
 .buttons {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 button {
-  padding: 15px 40px;
-  margin: 10px;
-  font-size: clamp(16px, 3vw, 20px);
+  padding: 12px 30px;
+  margin: 5px;
+  font-size: 18px;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: 0.2s;
+  flex-shrink: 0;
 }
 
 #yesBtn {
@@ -57,7 +67,7 @@ button:hover {
 
 .photo {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
   border-radius: 15px;
   margin: 15px 0;
@@ -97,7 +107,47 @@ button:hover {
 }
 
 p {
-  font-size: clamp(18px, 4vw, 24px);
+  font-size: 20px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 15px 0;
+}
+
+#response {
+  font-size: 22px;
+  color: #ff4d6d;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  button {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 15px 10px;
+  }
+  
+  .photo {
+    max-width: 100%;
+  }
+}
+
+/* Desktop - keep it nice and sized */
+@media (min-width: 601px) {
+  .photo {
+    max-width: 400px;
+  }
+  
+  .container {
+    max-width: 500px;
+  }
 }
