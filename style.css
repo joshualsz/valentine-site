@@ -94,3 +94,8 @@ body {
     z-index: 1;
   }
   
+  p {
+    font-size: 24px;  /* adjust this number to make it bigger or smaller */
+    font-weight: bold;  /* optional: makes it bold */
+    margin: 20px 0;
+  }
